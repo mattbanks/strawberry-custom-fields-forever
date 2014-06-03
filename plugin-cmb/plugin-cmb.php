@@ -35,7 +35,6 @@ function strawberryfields_sample_metaboxes( $meta_boxes ) {
 				'desc' => __( 'Enter the email address for contacting this area of the company', 'cmb' ),
 				'id'   => $prefix . 'email',
 				'type' => 'text_email',
-				'repeatable' => true,
 			),
 		),
 	);

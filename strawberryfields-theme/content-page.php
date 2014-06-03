@@ -23,19 +23,13 @@
 		<?php
 			// Display our custom data
 			$phone_number = get_post_meta( $post->ID, '_cmb_phone_number', true );
-			$email = get_post_meta( $post->ID, '_cmb_email' );
+			$email = get_post_meta( $post->ID, '_cmb_email', true );
 		?>
 		<h2>Phone Number:</h2>
 		<p><?php echo $phone_number; ?></p>
 
 		<h2>Email Addresses:</h2>
-		<?php
-			foreach ($email as $email_address) { ?>
-
-				<p><?php echo $email_address; ?></p>
-
-			<?php }
-		?>
+		<p><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></p>
 
 	</div><!-- .entry-content -->
 	<footer class="entry-footer">

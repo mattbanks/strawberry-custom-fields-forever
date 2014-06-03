@@ -23,11 +23,10 @@
 		<?php
 			// Display our custom data
 		?>
-		<h2>Launch Date:</h2>
-		<p><?php echo $cfs->get('launch_date'); ?></p>
-
 		<h2>Client Testimonial:</h2>
 		<?php echo $cfs->get('testimonial'); ?>
+
+		<h3><a href="<?php echo $cfs->get('project_link'); ?>">Link to Project</a></h3>
 
 
 	</div><!-- .entry-content -->

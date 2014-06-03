@@ -19,6 +19,24 @@
 				'after'  => '</div>',
 			) );
 		?>
+
+		<?php
+			// Display our custom data
+			$phone_number = get_post_meta( $post->ID, '_cmb_phone_number', true );
+			$email = get_post_meta( $post->ID, '_cmb_email' );
+		?>
+		<h2>Phone Number:</h2>
+		<p><?php echo $phone_number; ?></p>
+
+		<h2>Email Addresses:</h2>
+		<?php
+			foreach ($email as $email_address) { ?>
+
+				<p><?php echo $email_address; ?></p>
+
+			<?php }
+		?>
+
 	</div><!-- .entry-content -->
 	<footer class="entry-footer">
 		<?php edit_post_link( __( 'Edit', '_mbbasetheme' ), '<span class="edit-link">', '</span>' ); ?>

@@ -21,6 +21,14 @@
 				'after'  => '</div>',
 			) );
 		?>
+
+		<?php
+			// Display our custom data
+			$song = get_post_meta( $post->ID, '_strawberry_fields_favorite_song', true );
+		?>
+		<h2>Beatles song that makes this post better:</h2>
+		<p><?php echo $song; ?></p>
+
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">

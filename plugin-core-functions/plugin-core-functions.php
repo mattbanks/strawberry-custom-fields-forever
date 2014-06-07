@@ -103,3 +103,11 @@ function strawberryfields_save_meta_box_data( $post_id ) {
 	update_post_meta( $post_id, '_strawberry_fields_favorite_song', $my_data );
 }
 add_action( 'save_post', 'strawberryfields_save_meta_box_data' );
+
+/*
+ * Register our meta field so the REST API can access the data
+ */
+function strawberryfields_register_meta() {
+	register_meta( 'post', _strawberry_fields_favorite_song, null, '__return_true' );
+}
+add_action( 'init', 'strawberryfields_register_meta' );
